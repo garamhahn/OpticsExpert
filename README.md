@@ -5,8 +5,10 @@ It performs beam optics calculations such as MadX (CERN) or TRACE3D (LANL), and 
 This code was supported by Basic Science Research Program through the National Research Foundation of Korea (NRF) funded by the Ministry of Education (NRF-2017R1D1A1B03036184).
 
 ## Installation (Windows/Mac/Linux)
+
 ### Python
 Currently, OpticsExpert works on Python 2.7.x. (http://python.org)
+
 ### Prerequisite
 OpticsExpert requires following four packages.
  * numpy (worked on 1.13.3)
