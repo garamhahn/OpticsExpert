@@ -15,7 +15,7 @@ OpticsExpert requires following four packages.
  * wxpython (>=4.0.0b2)
 After the python installation, before running OpticsExpert, type following.
 
-    $ pip install numpy matplotlib scipy wxpython
+    $ pip install -U numpy matplotlib scipy wxpython
 
 ## Running
 Under the OpticsExpert directory, type.
