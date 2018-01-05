@@ -597,49 +597,6 @@ class TrBeam:
         return (x, xp, y, yp, w)
 
 
-class histo1d():
-    def __init__(self, minf, maxf, nbins):
-        self.minf = minf
-        self.maxf = maxf
-        self.nbins = nbins
-        self.dx = (maxf - minf) / nbins
-        self.data = [0 for i in xrange(nbins)]
-
-    def fill(self, x):
-        if x > self.minf and x < self.maxf:
-            tmpx = self.minf + self.dx
-            idx = 0
-            while idx != self.nbins:
-                if x < tmpx:
-                    self.data[idx] += 1
-                    return
-                idx += 1
-                tmpx += self.dx
-
-    def get_maxcount(self):
-        return max(self.data)
-
-    def get_bincenters(self):
-        return [self.minf + float(i) * self.dx + 0.5 * self.dx for i in xrange(self.nbins)]
-
-    def get_bincenter_by_count(self, count):
-        bincenter_set = []
-        for i, n in enumerate(self.data):
-            if n == count:
-                bincenter_set.append(self.minf + float(i) * self.dx + 0.5 * self.dx)
-        return bincenter_set
-
-    def get_bincenter_by_itclevel(self, itc_level):
-        # level is 0.0 ~ 1.0
-
-        dl = float(self.get_maxcount()) / float(len(ITC))
-        bincenter_set = []
-        for ix, n in enumerate(self.data):
-            if float(itc_level) * dl < float(n) and float(n) <= float(itc_level + 1) * dl:
-                bincenter_set.append(self.minf + float(ix) * self.dx + 0.5 * self.dx)
-        return bincenter_set
-
-
 class fitvalue_ab:
     def __init__(self, ax, bx, ay, by):
         self.ax = ax
