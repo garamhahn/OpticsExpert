@@ -56,7 +56,7 @@ $
 
 ### 소스코드 복사
 
-OpticsExpert는 github를 이용하여 개발/관리된다. 따라서 최신 버전의 소스코드를 얻기 위해서는 다음과 같이 실행한다.\` $ git clone http://github.com/garamhahn/OpticsExpert 위 명령 정상적으로 종료되면, OpticsExpert 소스코드가 동일한 이름의 디렉토리 안에 복사 되어있을 것이다.
+OpticsExpert는 github를 이용하여 개발/관리된다. 따라서 최신 버전의 소스코드를 얻기 위해서는 다음과 같이 실행한다.\` $ git clone http://github.com/garamhahn/OpticsExpert 위 명령 정상적으로 종료되면, OpticsExpert 소스코드가 동일한 이름의 디렉토리 안asdf에 복사 되어있을 것이다.
 
 둘러보기
 --------
@@ -71,32 +71,86 @@ $ python OpticsExpert.py
 
 ### 메인 윈도우
 
-#### 구조
+![](main_windows_.png) 메인 윈도우는 위 그림과 같이 (1) 주 메뉴, (2) 빠른 아이콘 메뉴, (3) 참조목록, (4) 배치목록, (5) 기타 정보 영역으로 나뉜다. 주 메뉴는 파일 관련한 부분, 빔과 관련된 부분, 그리고 계산 결과와 관련된 부분으로 나뉜다. 자세한 내용은 메뉴 섹션에서 다시 설명한다. 빠른 아이콘 메뉴는 주 메뉴에서 자주 사용하는 기능을 따로 분리하여 아이콘화 한 것이다. 이를 이용하면, 매번 메뉴를 사용하는 것 보다 빠르고 편리하게 작업할 수 있다.
 
-#### 단축 아이콘
-
-#### 메뉴 설명
-
-### 입력 창
-
-#### 구조
+(3) 참조 목록은 빔 라인에 실제 배치할 요소들이다. 이곳에 전자석, 드리프트 챔버 등을 등록하면, (4) 배치목록에 배치가 가능하다. 참조 목록에 많이 등록해 놓아도, 실제 배치목록에 없으면 계산되지 않는다.
 
 #### 메뉴 설명
 
-### 출력 창
+##### File
 
-#### 구조
+![](mm1.png)
 
-#### 메뉴 설명
+`New`는 새로운 빔광학 파일을 만든다. 현재 만들던 계산은 사라지고 전체를 초기화한다.
 
-빔 정의
--------
+`Open`은 기존에 `Save` 혹은 `Save As`로 저장했던 빔광학 파일 '.opt' 을 읽어 로딩한다.
+
+`Save`는 현재 내용을 현재 파일에 저장한다.
+
+`Save As`는 현재의 계산 내용을 새로운 파일에 저장한다.
+
+`Export`는 다른 형태의 파일로 저장할 때 사용한다. 계산을 검증하는 용도나, 복잡한 리포트를 간편하게 작성하기 위해 이용하면 좋다. 아래의 포멧을 지원한다.* `TRACE3D`는 Los Alamos National Laboratory 의 유명한 선형 빔 광학 소프트웨어이다.* `Mad`는 CERN의 유명한 빔 광학 소프트웨어이다.* `LaTeX`은 현재 계산된 주요 내용을 조판 프로그램 Latex 포멧으로 저장하여 리포트를 작성해준다.* `Excel`은 HWP나 Ms-Word와 같은 프로그램을 이용하여 리포트를 작성하는 경우에 이용하기 위해 옵틱스 테이블을 모두 엑셀로 변환한다.
+
+##### Beam
+
+![](mm3.png)
+
+`Tiwss Ellipse Boundary`는 입력 빔을 정의하는데 사용된다. 단수, 혹은 복수의 입력빔을 동시에 정의할 수 있으며, 정의하는 빔의 Transverse ellipse 를 모두 볼 수 있다.
+
+`Arbitrary Distribution`은 트랙킹 전용 옵션이다. 콜리메이터를 지나 컷팅된 빔 같은 특수한 빔 분포를 정의하고 싶을 때 사용된다.
+
+`Change Particle with holding optics`는 Optics function을 고정한 채로 입자를 교체하는 기능을 지원한다. 이 기능은 동일한 envelope을 만드는 전자석들의 세기를 계산하여 바꾸는 일을 한다.
+
+`Inverse tracing` 역추적 기능은 envelope function을 고정시킨 상태로 빔 라인의 순서를 정 반대로 뒤집어 놓는다. Fitting function이 정상 동작하지 않거나, 결과 빔으로 부터 시작빔을 거꾸로 계산하고 싶을때 사용할 수 있다.
+
+##### Result View
+
+![](mm2.png)
+
+`Optic` 광학 envelope 결과 창을 켜거나 끈다.
+
+`Tracks` 광학적 트래킹 계산을 진행하고 결과를 보여준다.
+
+#### 빠른 아이콘 메뉴
+
+![](quickm.png)
+
+왼쪽에서 오른쪽 순서대로 `New`, `Save`, `Save As`, `Add Ref. item`, `Remove Ref. item`, `Modify Ref. item`, `Move selected item up`, `Move selected item down`, `Fitting` 이다.
+
+-	`New`는 `File` 메뉴의 `New` 이다.
+-	`Save`는 `File` 메뉴의 `Save` 이다.
+-	`Save As`는 `File` 메뉴의 `Save As` 이다.
+
+-	`Add Ref. item`는 참조 리스트에 장치를 추가하고 싶을때 사용한다.
+
+-	`Remove Ref. item`는 참조 리스트에 장치를 제거하고 싶을때 사용한다. (배치된 장치가 없어야 제거된다.)
+
+-	`Modify Ref. item`는 참조 리스트에 있는 장치를 변경하고 싶을때 사용한다. 변경된 내용은 즉시 배치된 장치들에 반영된다.
+
+-	`Move selected item up`는 배치된 장치의 순서를 하나 위로 올리고 싶을 때 사용한다.
+
+-	`Move selected item down`는 배치된 장치의 순서를 하나 내리고 싶을 때 사용한다.
+
+-	`Fitting`은 특정 위치의 빔을 컴퓨터가 알아서 맞춰주게끔 하고플 때 사용한다.
 
 빔라인 디자인
 -------------
 
-트랙킹
-------
+계산 순서는 다음을 따른다.
+
+### 빔 정의
+
+![](beamdef.png)
+
+### Ref. Item의 등록과 사용
+
+### 아이템 배치하기
+
+### 조절하는 방법
+
+### Fitting
+
+### 트랙킹 해보기
 
 기타 기능들
 -----------
