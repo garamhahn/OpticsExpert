@@ -4,7 +4,7 @@ Optics Expert 사용자 메뉴얼
 소개
 ----
 
-OpticsExpert는 python으로 만든 빔 광학 계산 프로그램입니다. 오래전에 만들어진 빔 광학 프로그램들의 단점(Text User Interface)을 개선하여 편의성을 증가시키는것이 이 프로그램을 만든 이유입니다. 이 프로그램은 GPL 3.0 라이선스를 따른다. 따라서 교육용, 상업용을 포함한 모든 목적의 사용이 가능합니다.
+OpticsExpert는 python으로 만든 빔 광학 계산 프로그램입니다. 오래전에 만들어진 빔 광학 프로그램들의 단점(Text User Interface)을 개선하여 편의성을 증가시키는것이 이 프로그램을 만든 이유입니다. 이 프로그램은 GPL 3.0 라이선스를 따릅니다. 따라서 교육용, 상업용을 포함한 모든 목적의 사용이 가능합니다.
 
 OpticsExpert는 GitHub에서 관리와 업데이트가 공식적으로 이루어지고, 주소는 다음과 같습니다. http://github.com/garamhahn/OpticsExpert
 
