@@ -59,8 +59,9 @@ $
 OpticsExpert는 github를 이용하여 개발/관리됩니다. 따라서 다음과 같이 실행하여 github로 부터 최신 버전의 소스코드를 다운로드 할 수 있습니다.
 
 ```
-$ git clone http://github.com/garamhahn/OpticsExpert 
+$ git clone http://github.com/garamhahn/OpticsExpert
 ```
+
 위 명령이 정상적으로 종료되면, OpticsExpert 소스코드가 동일한 이름의 디렉토리 안에 복사 되어있을 것입니다.
 
 둘러보기
@@ -98,10 +99,10 @@ $ python OpticsExpert.py
 
 `Export`는 다른 형태의 파일로 저장할 때 사용합니다. 계산을 검증하는 용도나, 복잡한 리포트를 간편하게 작성하기 위해 이용하면 좋습니다. 아래의 포멧을 지원합니다.
 
-- `TRACE3D`는 Los Alamos National Laboratory 에서 개발된 선형 빔 광학 계산 소프트웨어 입니다.
-- `Mad`는 CERN에서 개발된 선형/비선형 빔 광학 계산 소프트웨어 입니다.
-- `LaTeX`은 현재 계산된 주요 내용을 조판 프로그램 Latex 포멧으로 저장하여 리포트를 작성해줍니다.
-- `Excel`은 옵틱스 테이블을 모두 엑셀로 변환합니다. 리포트 작업에 유용합니다.
+-	`TRACE3D`는 Los Alamos National Laboratory 에서 개발된 선형 빔 광학 계산 소프트웨어 입니다.
+-	`Mad`는 CERN에서 개발된 선형/비선형 빔 광학 계산 소프트웨어 입니다.
+-	`LaTeX`은 현재 계산된 주요 내용을 조판 프로그램 Latex 포멧으로 저장하여 리포트를 작성해줍니다.
+-	`Excel`은 옵틱스 테이블을 모두 엑셀로 변환합니다. 리포트 작업에 유용합니다.
 
 ##### <a name="m-beam"></a>Beam
 
@@ -146,7 +147,7 @@ $ python OpticsExpert.py
 -	`Fitting`은 특정 위치의 빔을 컴퓨터가 알아서 맞춰주게끔 하고플 때 사용합니다.
 
 빔라인 디자인의 예
--------------
+------------------
 
 여기에서는 간단한 빔라인 디자인을 수행하여 프로그램의 사용법을 보여줍니다. 디자인은 (1) 빔 정의, (2) 참조 요소의 등록, (3) 배치, (4) 조절, (5) 핏팅 의 순서로 진행합니다.
 
@@ -158,18 +159,18 @@ $ python OpticsExpert.py
 
 ![](beamdef.png)
 
-왼쪽에는 transverse plane 들의 위상공간입니다. 빨간색은 x-x' 파란색은 y-y'을 의미합니다. 입자의 정보와 빔 다발의 정보는 오른쪽 텍스트 작성 영역에서 정의할 수 있습니다. 
+왼쪽에는 transverse plane 들의 위상공간입니다. 빨간색은 x-x' 파란색은 y-y'을 의미합니다. 입자의 정보와 빔 다발의 정보는 오른쪽 텍스트 작성 영역에서 정의할 수 있습니다.
 
-- Rest mass : 입자 혹은 이온의 총 정지 질량 (단위 MeV)
-- Kinetic energy : 입자의 운동에너지 (단위 MeV)
-- dp/p : 운동량의 분산도, 1-sigma 값으로 정의 (단위 %)
-- Charge state : 전하량을 의미, 단위는 e+
-- alpx : x-x' 공간 twiss parameter의 alpha
-- betx : x-x' 공간 twiss parameter의 beta (단위 m)
-- emitx : x-x' 공간 twiss parameter의 emittance (단위 pi mm mrad)
-- alpy : y-y' 공간 twiss parameter의 alpha
-- bety : y-y' 공간 twiss parameter의 beta (단위 m)
-- emity : y-y' 공간 twiss parameter의 emittance (단위 pi mm mrad)
+-	Rest mass : 입자 혹은 이온의 총 정지 질량 (단위 MeV)
+-	Kinetic energy : 입자의 운동에너지 (단위 MeV)
+-	dp/p : 운동량의 분산도, 1-sigma 값으로 정의 (단위 %)
+-	Charge state : 전하량을 의미, 단위는 e+
+-	alpx : x-x' 공간 twiss parameter의 alpha
+-	betx : x-x' 공간 twiss parameter의 beta (단위 m)
+-	emitx : x-x' 공간 twiss parameter의 emittance (단위 pi mm mrad)
+-	alpy : y-y' 공간 twiss parameter의 alpha
+-	bety : y-y' 공간 twiss parameter의 beta (단위 m)
+-	emity : y-y' 공간 twiss parameter의 emittance (단위 pi mm mrad)
 
 **이 곳에 설정된 emittance 정보는 tracking 진행시 rms boundary로 간주됩니다.**
 
@@ -177,27 +178,27 @@ $ python OpticsExpert.py
 
 #### 따라하기
 
-50 MeV 양성자 빔을 만들고 싶다면, 다음과 같이 설정합니다. 
+50 MeV 양성자 빔을 만들고 싶다면, 다음과 같이 설정합니다.
 
-Title | Value | Unit
----|---|--- 
-Rest mass    | 938.272 | MeV 
-Kinetic energy | 50.0 | MeV
-Charge state | 1 | e+
+| Title          | Value   | Unit |
+|----------------|---------|------|
+| Rest mass      | 938.272 | MeV  |
+| Kinetic energy | 50.0    | MeV  |
+| Charge state   | 1       | e+   |
 
 정의하는 빔 물리량은 하나의 물리적 대상이 아니라 입자들의 다발이므로, 통계적 물리량이 필요합니다. 따라서 에너지/운동량 분산도 및 x 및 y 의 통계적 Twiss parameter 들이 필요합니다. 여기서는 운동량 분산도 1 % (1-sigma value)와 Statistical Twiss parameter를 다음과 같이 가정합니다.
 
-Title | Value | Unit
----|---|--- 
-dp/p. | 0.1 | %
-alpx | 0 | -
-betx | 1 | m
-emitx | 30 | pi mm mrad
-alpy | 0 | -
-bety | 2 | m
-emity | 32 | pi mm mrad
+| Title | Value | Unit       |
+|-------|-------|------------|
+| dp/p. | 0.1   | %          |
+| alpx  | 0     | \-         |
+| betx  | 10    | m          |
+| emitx | 30    | pi mm mrad |
+| alpy  | 0     | \-         |
+| bety  | 20    | m          |
+| emity | 32    | pi mm mrad |
 
-![](beamset.png)
+![](beamset1.png)
 
 결과는 위와 같습니다. 그리고 이것을 반영하고 창을 닫으면 광학 계산창은 아래와 같이 변경되어 있습니다.
 
@@ -211,94 +212,93 @@ emity | 32 | pi mm mrad
 
 새 요소는 빠른 메뉴의 + 모양 아이콘 버튼을 눌러 추가 할 수 있습니다. 추가 할 수 있는 아이템의 종류는 아래와 같습니다.
 
-1. Drift Space (드리프트 공간)
-1. Quadrupole Magnet (사극자석)
-1. Dipole Magnet (이극자석)
-1. Solenoid (솔레노이드)
-1. Thin Lens(얇은 랜즈)
-1. Collimators x/y
-1. RF Gap (고주파 갭)
-1. Monitor (=Drift Space)
+1.	Drift Space (드리프트 공간)
+2.	Quadrupole Magnet (사극자석)
+3.	Dipole Magnet (이극자석)
+4.	Solenoid (솔레노이드)
+5.	Thin Lens(얇은 랜즈)
+6.	Collimators x/y
+7.	RF Gap (고주파 갭)
+8.	Monitor (=Drift Space)
 
 각 요소별로 등록을 위해 셋팅해야 하는 값들은 아래와 같습니다. *이텔릭* 체는 조절변수를 의미합니다. 조절변수는 배치후 조절 가능한 인자입니다.
- 
-1. Drift Space
-  - 이름 (Name)
-  - 빔 파이프 안쪽 반지름 (Inner radius, cm)
-  - 최대 *길이* (Maximum length, cm)
-1. Quadrupole Magnet
-  - 이름 (Name)
-  - 유효 길이 (Effective length, cm)
-  - 빔 파이프 안쪽 반지름 (Inner radius, cm)
-  - 최대 *집속도* (Focusing gradient, T/m)
-1. Dipole Magnet
-  - 이름 (Name)
-  - R 방향 자기장 세기 변화도 (Field Index, n)
-  - 휨 각도 (Banding angle, degree)
-  - 최대 갭 크기 (Full gap size, cm)
-  - 최대 폴 너비 (Full pole width, cm)
-  - 입사 폴 엣지 각도 (Front edge angle, degree)
-  - 인출 폴 엣지 각도 (Back edge angle, degree)
-  - K1 FINT (by default 0.45)
-  - K2 FINT (by default 0.000001)
-  - *회전 반경* (Max. radius of Curv., m)
-1. Solenoid
-  - 이름 (Name)
-  - 유효 길이 (Effective length, cm)
-  - 빔 파이프 안쪽 반지름 (Inner radius, cm)
-  - 최대 *필드세기* (Max. B strength, T)
-1. Thin Lens
-  - 이름 (Name)
-  - y 방향 초점거리 (cm)
-  - z 방향 초점거리 (cm)
-  - 빔 파이프 안쪽 반지름 (Inner radius, cm)
-  - 최대 *x 방향 초점거리* (cm)
-1. Collimators x/y
-  - 이름 (Name)
-  - 최대 *반폭* (Max. half-gap size, cm)
-1. RF Gap
-  - 이름 (Name)
-  - 결맞음 각도 (Synchronous phase) 
-  - 주파수 (Frequency)
-  - 빔 파이프 안쪽 반지름 (Inner radius, cm)
-  - 최대 *유효 갭 전위차* (Max. Eff. gap Volt., MV)
-1. Monitor (=Drift Space)
-  - 이름 (Name)
-  - 빔 파이프 안쪽 반지름 (Inner radius, cm)
-  - 최대 *길이* (Maximum length, cm)
+
+1.	Drift Space
+	-	이름 (Name)
+	-	빔 파이프 안쪽 반지름 (Inner radius, cm)
+	-	최대 *길이* (Maximum length, cm)
+2.	Quadrupole Magnet
+	-	이름 (Name)
+	-	유효 길이 (Effective length, cm)
+	-	빔 파이프 안쪽 반지름 (Inner radius, cm)
+	-	최대 *집속도* (Focusing gradient, T/m)
+3.	Dipole Magnet
+	-	이름 (Name)
+	-	R 방향 자기장 세기 변화도 (Field Index, n)
+	-	휨 각도 (Banding angle, degree)
+	-	최대 갭 크기 (Full gap size, cm)
+	-	최대 폴 너비 (Full pole width, cm)
+	-	입사 폴 엣지 각도 (Front edge angle, degree)
+	-	인출 폴 엣지 각도 (Back edge angle, degree)
+	-	K1 FINT (by default 0.45)
+	-	K2 FINT (by default 0.000001)
+	-	*회전 반경* (Max. radius of Curv., m)
+4.	Solenoid
+	-	이름 (Name)
+	-	유효 길이 (Effective length, cm)
+	-	빔 파이프 안쪽 반지름 (Inner radius, cm)
+	-	최대 *필드세기* (Max. B strength, T)
+5.	Thin Lens
+	-	이름 (Name)
+	-	y 방향 초점거리 (cm)
+	-	z 방향 초점거리 (cm)
+	-	빔 파이프 안쪽 반지름 (Inner radius, cm)
+	-	최대 *x 방향 초점거리* (cm)
+6.	Collimators x/y
+	-	이름 (Name)
+	-	최대 *반폭* (Max. half-gap size, cm)
+7.	RF Gap
+	-	이름 (Name)
+	-	결맞음 각도 (Synchronous phase)
+	-	주파수 (Frequency)
+	-	빔 파이프 안쪽 반지름 (Inner radius, cm)
+	-	최대 *유효 갭 전위차* (Max. Eff. gap Volt., MV)
+8.	Monitor (=Drift Space)
+	-	이름 (Name)
+	-	빔 파이프 안쪽 반지름 (Inner radius, cm)
+	-	최대 *길이* (Maximum length, cm)
 
 #### 따라하기
 
-상전도 사극 전자석 하나, 상전도 이극 전자석 하나를 등록해봅니다. 드리프트는 이미 생성되어 있으므로 생략합니다.
-우선 + 버튼을 눌러 quadrupole 을 선택합니다.
+상전도 사극 전자석 하나, 상전도 이극 전자석 하나를 등록해봅니다. 드리프트는 이미 생성되어 있으므로 생략합니다. 우선 + 버튼을 눌러 quadrupole 을 선택합니다.
 
-Name | Value | Unit
----|---|---
-이름 | MyQ | -
-유효 길이 | 25 | cm
-빔 파이프 안쪽 반지름 | 2.5 | cm
-최대 *집속도* | 24 | T/m 
+| Name                  | Value | Unit |
+|-----------------------|-------|------|
+| 이름                  | MyQ   | \-   |
+| 유효 길이             | 25    | cm   |
+| 빔 파이프 안쪽 반지름 | 2.5   | cm   |
+| 최대 *집속도*         | 24    | T/m  |
 
 또, 다시 + 버튼을 눌러 dipole 을 선택합니다. 우리는 45도 짜리, 중심자장 1.5 Tesla 짜리 밴딩 자석을 만들것입니다. 다음을 입력합니다.
 
-Name | Value | Unit
----|---|---
-이름 | MyD | -
-R 방향 자기장 세기 변화도 (Field Index, n) | 0 | -
-휨 각도 | 45 | degree
-최대 갭 크기 | 5 | cm
-최대 폴 너비 | 12 | cm
-입사 폴 엣지 각도 | 0 | degree
-인출 폴 엣지 각도 | 0 | degree 
-K1 FINT | 0.45 | -
-K2 FINT | 0.000001 | -
-*회전 반경* | **0.687** | m
+| Name                                       | Value     | Unit   |
+|--------------------------------------------|-----------|--------|
+| 이름                                       | MyD       | \-     |
+| R 방향 자기장 세기 변화도 (Field Index, n) | 0         | \-     |
+| 휨 각도                                    | 45        | degree |
+| 최대 갭 크기                               | 5         | cm     |
+| 최대 폴 너비                               | 12        | cm     |
+| 입사 폴 엣지 각도                          | 0         | degree |
+| 인출 폴 엣지 각도                          | 0         | degree |
+| K1 FINT                                    | 0.45      | \-     |
+| K2 FINT                                    | 0.000001  | \-     |
+| *회전 반경*                                | **0.687** | m      |
 
 1.5 tesla 자기장 아래에서 50 MeV 양성자의 회전 반경을 구하려면, 아래와 같이 계산할 수 있습니다. 아래와 같이, 가속기 계산에 유용한 함수들을 별도로 분리하여 사용 가능합니다.
 
 ```
 garam@~/Downloads/OpticsExpert-doc_kr.md] python
-Python 2.7.14 (default, Sep 25 2017, 09:53:22) 
+Python 2.7.14 (default, Sep 25 2017, 09:53:22)
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.37)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from AccBasic import *
@@ -306,25 +306,39 @@ Type "help", "copyright", "credits" or "license" for more information.
 1.0316216040143555
 >>> brho(50*MeV,1) / (1.5 * tesla) / m
 0.6877477360095703
->>> 
+>>>
 ```
+
 K1과 K2는 Fringe Field 적분량에 관련한 상수입니다. 전자석의 fringe field가 크다면 이 숫자를 조절해야 합니다.
 
 ### 아이템 배치하기
 
-참조 리스트의 항목들은 마우스 더블 클릭으로 배치시킬 수 있습니다. 예를 들어, 밴딩 마그넷을 배치하고 그 뒤에 사극전자석 3기를 연속 배치하려면, 다음의 순서대로 더블클릭 합니다. 
-  
-  1. MyD
-  1. Drift
-  1. MyQ
-  1. Drift
-  1. MyQ
-  1. Drift
-  1. MyQ
-  1. Drift
+참조 리스트의 항목들은 마우스 더블 클릭으로 배치시킬 수 있습니다. 예를 들어, 밴딩 마그넷을 배치하고 그 뒤에 사극전자석 3기를 연속 배치하려면, 다음의 순서대로 더블클릭 합니다.
 
+1.	MyD
+2.	Drift
+3.	MyQ
+4.	Drift
+5.	MyQ
+6.	Drift
+7.	MyQ
+8.	Drift
+
+모두 배치가 되면 다음과 같은 모양입니다.
+
+![](conf01.png)
 
 ### 조절하는 방법
+
+먼저 드리프트 길이를 조절합니다. 조절 방법은 조절하고자 하는 배치 요소(참조리스트 아님)에 더블클릭 후 마우스 혹은 키보드 입력으로 원하는 수치를 입력합니다. Quadrupole 간 길이를 모두 25 cm 로 바꾸게 되면 아래 그림과 같은 모습이 됩니다.
+
+![](conf02.png)
+
+이제, Quadrupole strength를 조절합니다. 조절 방법은 앞서 언급한 드리프트 길이의 조절 방법과 같습니다.
+
+![](conf03.png)
+
+위와 같이 조절하면, focal spot을 생성할 수도 있습니다.
 
 ### Fitting
 
