@@ -29,4 +29,4 @@ Under the OpticsExpert directory, type.
 Or, if you are a Windows user, you can simply change the file extension from `OpticsExpert.py` to `OpticsExpert.pyw`. And double click on it.
 
 ## User Document
-To Be Continued.
+Umm...
